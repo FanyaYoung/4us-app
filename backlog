@@ -1,0 +1,169 @@
+# 4us-app Robust Backlog
+
+## Legend
+
+* **\[User]**: User management/account features
+* **\[Data]**: Data security, privacy, analytics, and behavioral data
+* **\[Media]**: Photo/video sharing, instant capture, download, AI reel
+* **\[Social]**: Social media accounts, hashtag creation/sharing, and connections
+* **\[Infra]**: QR codes, calendar, geolocation, invitations, integrations
+
+---
+
+## User Management
+
+### USR-1 \[User] User Registration and Login
+
+* **Story:** As a new user, I want to register via email, phone, or social media so that I can create and join events.
+* **Acceptance Criteria:** User can register via email/phone/social account. Receive verification. Log in/out securely.
+
+### USR-2 \[User] Guest Access
+
+* **Story:** As a guest, I want to join events without registering so I can participate quickly.
+* **Acceptance Criteria:** User can enter as guest, assign a temporary user ID, limited functionality for guests.
+
+### USR-3 \[User] Profile Management
+
+* **Story:** As a user, I want to edit my profile picture, display name, and manage my account details.
+* **Acceptance Criteria:** Users can update name, picture, email, and change password.
+
+### USR-4 \[User] User Roles (Organizer, Guest, Admin)
+
+* **Story:** As an organizer/admin, I want to manage attendees and moderate content and permissions.
+* **Acceptance Criteria:** Roles are visible and permissions enforced (e.g., only organizer/admin can remove content or send invites).
+
+### USR-5 \[User]\[Data] GDPR/CCPA Compliance
+
+* **Story:** As a user, I want control over my personal data in accordance with privacy regulations.
+* **Acceptance Criteria:** Users can request data export/deletion; clear consent is given for data storage.
+
+---
+
+## Data Management, Analytics & Behavioral Data
+
+### DATA-1 \[Data] User Data Encryption
+
+* **Story:** As a user, I want my data to be securely stored and transmitted.
+* **Acceptance Criteria:** All PII encrypted at rest and in transit.
+
+### DATA-2 \[Data] Analytics & Demographics Dashboard
+
+* **Story:** As an admin, I want to view usage analytics, demographics, and event participation, including favorite content and behavioral patterns.
+* **Acceptance Criteria:** Admin dashboard with visual stats, demographics, and behavioral data.
+
+### DATA-3 \[Data] Activity & Behavioral Logging
+
+* **Story:** As a system admin, I want logs of key actions and digital footprint (favorites, shares, views, posts, device/location data) for monitoring and personalization.
+* **Acceptance Criteria:** All actions, locations, and favorites logged with timestamps and anonymized demographic data.
+
+### DATA-4 \[Data] Event & Media Metadata Export
+
+* **Story:** As an organizer, I want to export all event and media data including photo/video metadata (EXIF, location, device info, time).
+* **Acceptance Criteria:** Download/export button for media and full metadata.
+
+---
+
+## Social Media Accounts, Hashtags & Connections
+
+### SOC-1 \[Social] Social Account Linking
+
+* **Story:** As a user, I want to link my social media accounts (Instagram, Facebook, X/Twitter, TikTok, Snapchat) for login and sharing.
+* **Acceptance Criteria:** OAuth integration for major social platforms; users can connect/disconnect at any time.
+
+### SOC-2 \[Social] Hashtag Creation & Social Sharing
+
+* **Story:** As an event creator, I want to create unique event hashtags and instantly share them (and the event) to social media platforms.
+* **Acceptance Criteria:** Hashtag auto-generated; share buttons for X, Facebook, Instagram, TikTok, Snapchat, etc.
+
+### SOC-3 \[Social] Guest Connections, Chat & Invites
+
+* **Story:** As a guest or admin, I want to connect, chat, and send invitations (via SMS, email, app link) to others for the event.
+* **Acceptance Criteria:** Connections, messaging, and invite features enabled for all users; admins can send bulk invites/links.
+
+### SOC-4 \[Social] Hashtag Tracking & Social Engagement Analytics
+
+* **Story:** As an organizer, I want to see how the event hashtag is used and engaged with on external platforms.
+* **Acceptance Criteria:** Analytics for hashtag mentions and engagement, if API access allows.
+
+---
+
+## Media Management, Gallery & Instant Capture
+
+### MED-1 \[Media] Instant Photo/Video Capture & Upload
+
+* **Story:** As a guest, I want to instantly take photos or videos and upload them directly to the event gallery from my device camera.
+* **Acceptance Criteria:** Camera integration; upload immediately to event gallery/media page.
+
+### MED-2 \[Media] Media Gallery & Live Wall
+
+* **Story:** As a user, I want to view all event media (photos/videos) in a collective, real-time gallery.
+* **Acceptance Criteria:** Responsive, filterable media wall; new uploads appear live.
+
+### MED-3 \[Media] Media Download & Favorites
+
+* **Story:** As a guest, I want to download media, mark favorites, and see the most popular photos/videos.
+* **Acceptance Criteria:** Download and favorite icons available for all media; most favorited media surfaced.
+
+### MED-4 \[Media] Media Moderation & Privacy
+
+* **Story:** As an admin, I want to approve or remove inappropriate content, manage privacy, and filter uploads.
+* **Acceptance Criteria:** Moderator dashboard; flagged content easily reviewed and managed.
+
+### MED-5 \[Media] Media Metadata & Demographics Storage
+
+* **Story:** As a developer, I want to store EXIF/photo metadata, user demographics, device/location info with each upload.
+* **Acceptance Criteria:** All uploads are tagged with metadata and linked to user/social profiles.
+
+### MED-6 \[Media] AI-generated Event Reel
+
+* **Story:** As a user, I want an AI-generated highlight reel at the event’s conclusion based on favorites, mood, and theme input.
+* **Acceptance Criteria:** Guests input preferences; AI generates and notifies users when reel is ready.
+
+---
+
+## Infrastructure & Integrations
+
+### INFRA-1 \[Infra] QR Code Generation & Event Discovery
+
+* **Story:** As an organizer, I want a unique QR code for my event so guests can scan to join, and I want users to discover events via geo-location.
+* **Acceptance Criteria:** QR code generated for each event; events searchable/discoverable by location.
+
+### INFRA-2 \[Infra] Calendar Integration
+
+* **Story:** As a user, I want to add events to my device calendar (Google, Apple, Outlook, etc.).
+* **Acceptance Criteria:** Add-to-calendar button integrates with major calendar providers.
+
+### INFRA-3 \[Infra] Cloud Storage & CDN
+
+* **Story:** As a developer, I want to store all media securely in the cloud with optimized global delivery.
+* **Acceptance Criteria:** Media securely uploaded, stored, and delivered via CDN.
+
+### INFRA-4 \[Infra] Invitations via Link, Text, Email
+
+* **Story:** As an admin, I want to invite users via text, email, or sharable app link.
+* **Acceptance Criteria:** Bulk/individual invitations by multiple methods; deep links open the app or event page directly.
+
+---
+
+## Backlog Sample Table
+
+| ID      | Feature                     | Type   | Priority | Status | Notes                              |
+| ------- | --------------------------- | ------ | -------- | ------ | ---------------------------------- |
+| USR-1   | User Registration           | User   | High     | Todo   | OAuth + email/phone                |
+| DATA-1  | Data Encryption             | Data   | High     | Todo   | Use at rest + in transit           |
+| SOC-2   | Hashtag Creation/Sharing    | Social | High     | Todo   | TikTok/X/Facebook/Instagram/Snap   |
+| MED-1   | Instant Photo/Video Capture | Media  | High     | Todo   | Camera integration                 |
+| INFRA-1 | QR Code & Geo-Location      | Infra  | High     | Todo   | QR event join, location-based      |
+| INFRA-2 | Calendar Integration        | Infra  | High     | Todo   | Google/Apple/Outlook Calendar      |
+| INFRA-4 | Invite via Link/Text/Email  | Infra  | High     | Todo   | Deep links                         |
+| DATA-2  | Analytics & Behavioral Data | Data   | High     | Todo   | Admin dashboard, digital footprint |
+
+---
+
+## Notes
+
+* Priorities and statuses should be updated as features progress.
+* Expand with epics/stories for notifications, reporting, accessibility, and more.
+* See data model for additional technical fields and relationships.
+
+---

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Event Gallery | 4-Us</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #2276dc;
+      --accent: #ffaf40;
+      --background: #f7fafd;
+      --card: #fff;
+      --shadow: 0 2px 24px rgba(34, 118, 220, 0.10);
+      --radius: 1.3rem;
+      --fav: #fc6060;
+    }
+    body {
+      background: var(--background);
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', Arial, sans-serif;
+      color: #1a2940;
+      min-height: 100vh;
+    }
+    .container {
+      max-width: 440px;
+      margin: 0 auto;
+      padding: 1.5rem 1rem;
+    }
+    .logo-top {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 1.3rem;
+    }
+    .logo-top img {
+      width: 56px;
+      height: 56px;
+      border-radius: 18px;
+      background: var(--primary);
+    }
+    .event-header {
+      text-align: center;
+      margin-bottom: 0.7rem;
+    }
+    .event-name {
+      color: var(--primary);
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin: 0 0 0.2rem 0;
+    }
+    .event-hashtag {
+      color: #5d7bad;
+      font-weight: 500;
+      font-size: 1.1rem;
+    }
+    .action-bar {
+      display: flex;
+      gap: 0.8rem;
+      margin: 1.3rem 0 1.1rem 0;
+      justify-content: center;
+    }
+    .action-btn {
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      border-radius: 2rem;
+      font-size: 1.07rem;
+      padding: 0.7rem 1.3rem;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: var(--shadow);
+      transition: background 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .action-btn:hover {
+      background: var(--accent);
+      color: #1a2940;
+    }
+    .gallery-wall {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.8rem;
+    }
+    .media-card {
+      background: var(--card);
+      border-radius: 1rem;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      position: relative;
+    }
+    .media-card img, .media-card video {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+      height: 160px;
+    }
+    .media-actions {
+      position: absolute;
+      bottom: 0.6rem;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      padding: 0 0.6rem;
+      pointer-events: none;
+    }
+    .fav-btn, .download-btn {
+      background: rgba(255,255,255,0.92);
+      border: none;
+      border-radius: 50%;
+      width: 34px;
+      height: 34px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.3rem;
+      color: #fc6060;
+      margin: 0.1rem 0;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(34,118,220,0.07);
+      pointer-events: auto;
+      transition: background 0.2s;
+    }
+    .download-btn { color: var(--primary);}
+    .fav-btn.favorited { background: var(--fav); color: #fff;}
+    .media-meta {
+      font-size: 0.93rem;
+      color: #6c85a7;
+      padding: 0.18rem 0.7rem 0.23rem 0.7rem;
+      background: rgba(255,255,255,0.97);
+      border-top-left-radius: 0.8rem;
+      border-top-right-radius: 0.8rem;
+    }
+
+    @media (min-width: 700px) {
+      .container { max-width: 700px;}
+      .gallery-wall { grid-template-columns: repeat(4, 1fr);}
+      .media-card img, .media-card video { height: 128px;}
+    }
+  </style>
+  <!-- FontAwesome for demo icons -->
+  <script src="https://kit.fontawesome.com/4ad635e1e5.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="logo-top">
+      <img src="logo-4us.png" alt="4-Us Logo"/>
+    </div>
+    <div class="event-header">
+      <div class="event-name">Birthday Bash 2025</div>
+      <div class="event-hashtag">#4us2025</div>
+    </div>
+    <div class="action-bar">
+      <button class="action-btn" onclick="takePhoto()">
+        <i class="fa-solid fa-camera"></i> Take Photo/Video
+      </button>
+      <button class="action-btn" onclick="document.getElementById('media-upload').click()">
+        <i class="fa-solid fa-upload"></i> Upload
+      </button>
+      <input type="file" id="media-upload" accept="image/*,video/*" multiple style="display:none"/>
+    </div>
+    <div class="gallery-wall">
+      <!-- Example gallery items -->
+      <div class="media-card">
+        <img src="media1.jpg" alt="Media 1"/>
+        <div class="media-actions">
+          <button class="fav-btn" title="Favorite"><i class="fa-solid fa-heart"></i></button>
+          <button class="download-btn" title="Download"><i class="fa-solid fa-download"></i></button>
+        </div>
+        <div class="media-meta">Alex • 3 mins ago</div>
+      </div>
+      <div class="media-card">
+        <video src="media2.mp4" controls poster="media2.jpg"></video>
+        <div class="media-actions">
+          <button class="fav-btn favorited" title="Favorite"><i class="fa-solid fa-heart"></i></button>
+          <button class="download-btn" title="Download"><i class="fa-solid fa-download"></i></button>
+        </div>
+        <div class="media-meta">Jordan • 6 mins ago</div>
+      </div>
+      <div class="media-card">
+        <img src="media3.jpg" alt="Media 3"/>
+        <div class="media-actions">
+          <button class="fav-btn" title="Favorite"><i class="fa-solid fa-heart"></i></button>
+          <button class="download-btn" title="Download"><i class="fa-solid fa-download"></i></button>
+        </div>
+        <div class="media-meta">Sam • 14 mins ago</div>
+      </div>
+      <div class="media-card">
+        <img src="media4.jpg" alt="Media 4"/>
+        <div class="media-actions">
+          <button class="fav-btn" title="Favorite"><i class="fa-solid fa-heart"></i></button>
+          <button class="download-btn" title="Download"><i class="fa-solid fa-download"></i></button>
+        </div>
+        <div class="media-meta">Chris • 23 mins ago</div>
+      </div>
+    </div>
+  </div>
+  <script>
+    function takePhoto() {
+      alert('Camera integration goes here!');
+      // Connect this to your native/camera API
+    }
+  </script>
+</body>
+</html>
