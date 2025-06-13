@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>4-Us: Share, Celebrate, Connect</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #2276dc;
+      --background: #f7fafd;
+      --card: #fff;
+      --shadow: 0 2px 24px rgba(34, 118, 220, 0.12);
+      --radius: 2rem;
+      --accent: #ffaf40;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: var(--background);
+      font-family: 'Inter', Arial, sans-serif;
+      color: #1a2940;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 420px;
+      margin: 0 auto;
+      padding: 1.5rem 1rem;
+    }
+
+    .logo-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+
+    .logo-wrap img {
+      width: 96px;
+      height: 96px;
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+      background: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .app-title {
+      font-size: 2rem;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      color: var(--primary);
+      margin: 0 0 0.5rem 0;
+      text-align: center;
+    }
+
+    .tagline {
+      color: #4e657f;
+      font-size: 1.05rem;
+      font-weight: 400;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 1.5rem 1.2rem;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .card h2 {
+      font-size: 1.25rem;
+      color: var(--primary);
+      font-weight: 600;
+      margin-top: 0;
+    }
+
+    .cta-btn {
+      margin-top: 1.5rem;
+      background: var(--primary);
+      color: #fff;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 2rem;
+      padding: 0.8rem 2.5rem;
+      box-shadow: var(--shadow);
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .cta-btn:hover {
+      background: var(--accent);
+      color: #1a2940;
+    }
+
+    @media (min-width: 700px) {
+      .container {
+        max-width: 520px;
+        padding: 3rem 2rem;
+      }
+      .logo-wrap img {
+        width: 128px;
+        height: 128px;
+      }
+      .app-title {
+        font-size: 2.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo-wrap">
+      <img src="logo-4us.png" alt="4-Us App Logo" />
+      <div class="app-title">4-Us</div>
+      <div class="tagline">Sharing Memories We Love. For Us.</div>
+    </div>
+    <div class="card">
+      <h2>Join, Celebrate, and Share Your Event</h2>
+      <p>
+        Scan a QR code, enter a hashtag, or get an invite to join a celebration. <br />
+        Connect with friends and guests, share photos and videos, and relive every highlight—together.
+      </p>
+      <button class="cta-btn">Get Started</button>
+    </div>
+  </div>
+</body>
+</html>
